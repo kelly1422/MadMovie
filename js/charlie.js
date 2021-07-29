@@ -1,4 +1,20 @@
 console.clear();
+var t1 = gsap.timeline();
+t1.to("body", { duration: 1, backgroundColor: '#ecc7c7', ease: "none" }, 0)
+t1.to(".bar",{
+    opacity:1
+});
+t1.to(".ticket",{
+    opacity:1,
+}).to(".ticket",{
+    y:37+"vh",
+    duration:1
+}).to(".ticket",{
+    opacity:0
+}).to(".button-container",{
+    opacity:1
+}).to(".eyes",{opacity:1}).to(".hat",{opacity:1})
+gsap.to(".sound", { opacity: 1, y:-130}); 
 gsap.set(".correct",{scaleX:0, scaleY:0});
 gsap.set(".wrong",{scaleX:0, scaleY:0});
 // var bars=gsap.utils.toArray(".bar");
@@ -6,16 +22,6 @@ var bars=["#bar0","#bar1","#bar2","#bar3","#bar4"];
 console.log(bars);
 
 var index=[0,1,2,3,4];
-gsap.timeline()
-.to(".ticket",{
-    y:37+"vh",
-    duration:1,
-    delay:1
-}).to(".ticket",{
-    opacity:0
-}).to(".button-container",{
-    opacity:1
-}).to(".eyes",{opacity:1}).to(".hat",{opacity:1})
 var t1 = gsap.timeline();
 
 var shufflechk=0;
@@ -318,3 +324,22 @@ var canvas,ctx;
       this.y += this.vy * this.friction;
       this.vy *= this.deceleration;
    }
+   var audio = new Audio("./source/welcome.mp3");
+var play = 0;
+audio.autoplay = true;
+audio.loop = true;
+audio.volume = 0.3;
+
+document.querySelector(".sound").onclick = function() {
+    if(play){
+        audio.pause();
+        play=0;
+        document.querySelector(".sound").src="./source/mute.png";
+    }
+    else{
+        // audio.load();
+        audio.play();
+        play=1;
+        document.querySelector(".sound").src="./source/volume.png";
+    }
+}

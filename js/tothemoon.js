@@ -6,7 +6,10 @@ var posX = 0,
 
 var mouseX = 0,
     mouseY = 0;
-
+gsap.to("#lunar",{
+  opacity:1,
+  duration:3
+})
 TweenMax.to({}, 0.016, {
   repeat: -1,
   onRepeat: function() {

@@ -1,28 +1,28 @@
 let muted = true,
-    n = 8;
+    n = 7;
 
 gsap.timeline()
     .set('#container', {perspective:5000})
     .set('#soundBtn', {width:16, height:32, left:'50%', top:'100%', x:-8, y:-40, cursor:'pointer', opacity:0.5});
 
 var img = [];
-img[0]="./source/poster_train.jpg";
-img[1]="./source/poster_moon.jpg";
+img[0]="./source/fast_poster.jpg";
+img[1]="./source/pulp_poster.jpg";
 img[2]="./source/poster_oz.jpg";
-img[3]="./source/poster_oz.jpg";
+img[3]="./source/poster_charlie.jpg";
 img[4]="./source/poster_moon.jpg";
 img[5]="./source/poster_train.jpg";
-img[6]="./source/poster_oz.jpg";
-img[7]="./source/poster_oz.jpg";
+img[6]="./source/2001_poster.png";
+img[7]="./source/godfather_poster.jpg";
 
 var ref =[];
 ref[0]="aaa.html";
-ref[1]="aaa.html";
+ref[1]="tothemoon.html";
 ref[2]="door.html";
-ref[3]="aaa.html";
-ref[4]="aaa.html";
+ref[3]="charlie.html";
+ref[4]="tothemoon.html";
 ref[5]="aaa.html";
-ref[6]="aaa.html";
+ref[6]="door.html";
 ref[7]="door.html";
 
 

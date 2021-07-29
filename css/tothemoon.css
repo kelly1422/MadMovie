@@ -138,6 +138,7 @@ canvas {
   top: 20%;
   width: 20%;
   z-index: 1200;
+  opacity: 0;
 }
 
 body {
