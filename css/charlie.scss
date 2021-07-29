@@ -1,0 +1,145 @@
+$small-screen: 650px;
+
+:root {
+  --btn-width: 150px;
+  --btn-height: 75px;
+  --red: #d20404;
+  --light-orange: #fff1c5;
+  --default: 0.5s;
+  --fast: 0.3s;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  user-select: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+html,
+body {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 50%;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--btn-height);
+  width: var(--btn-width);
+  font-size: 1.6rem;
+  color: black;
+  cursor: pointer;
+  &--block {
+    font-family: "Graduate", sans-serif;
+    transform: translate3d(-15px, -15px, 0);
+    transition-property: box-shadow, transform;
+    transition-duration: var(--fast);
+    color: var(--red);
+    border: 3px solid var(--red);
+    background-color: var(--light-orange);
+    box-shadow: 15px 15px 5px 0px black;
+
+    &:active {
+      transform: translate3d(-5px, -5px, 0);
+      box-shadow: 5px 5px 0px 0px black;
+    }
+  }
+}
+
+:root {
+  --border-color: #d7dbe3;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Open Sans",
+    "Helvetica Neue", sans-serif;
+  --green: #0cd977;
+  --red: #ff1c1c;
+  --pink: #ff93de;
+  --purple: #5767ed;
+  --yellow: #ffc61c;
+  --rotation: 0deg;
+}
+
+body {
+  overflow: hidden;
+}
+
+@keyframes confettiRain {
+  0% {
+    opacity: 1;
+    margin-top: -100vh;
+    margin-left: -200px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 100vh;
+    margin-left: 200px;
+  }
+}
+
+.confetti {
+  opacity: 0;
+  position: absolute;
+  width: 1rem;
+  height: 1.5rem;
+  animation: confettiRain 5s infinite;
+}
+
+.bar {
+  width: 8%;
+  top: 50%;
+  cursor: pointer;
+}
+.ticket {
+  position: absolute;
+  width: 8%;
+  top: 13%;
+  left: 46%;
+}
+#bar0 {
+  position: absolute;
+  left: 10%;
+}
+#bar1 {
+  position: absolute;
+  left: 28%;
+}
+#bar2 {
+  position: absolute;
+  left: 46vw;
+}
+#bar3 {
+  position: absolute;
+  left: 64%;
+}
+#bar4 {
+  position: absolute;
+  left: 82%;
+}
