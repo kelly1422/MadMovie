@@ -1,0 +1,23 @@
+/* 
+.framebottom{position: fixed; top: 50px; left: 420px; right: 350px; width: 1000px; }
+.frametop{position: fixed; top: 50px; left: 420px; right: 350px; width: 1000px; }
+.frameright{position: fixed; top: 50px; left: 420px; right: 350px; width: 1000px;}
+.frameleft{position: fixed; top: 50px; left: 420px; right: 350px; width: 1000px; } */
+.framebottom{position: fixed; top: 50px; left: 420px; right: 350px; width: 1000px; }
+.film {position : fixed; top:150px; left:300px}
+
+html {
+    scroll-snap-type: y mandatory;
+  }
+.panel {
+    scroll-snap-align: start;
+  }
+
+
+.container{
+    background-color: rgb(50, 179, 179);
+
+}
+.container2{
+    background-color: rgb(51, 51, 51);
+}

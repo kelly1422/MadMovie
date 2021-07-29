@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./css/door.css">
+</head>
+<body class="bodyy">
+    <p class="pp"><a>The Wizard of OZ</a></p>
+    <h4 class="open">open the door</h4>
+    <button class="back_1" onclick={back1()}>close</button>
+    <button class="back_2" onclick={back2()}>close</button>
+    <img src="source/mute.png" class="sound" width=40>
+    
+    <div class="half">
+        <div class="backDoor">
+            <div class="door" onclick={image1move();}><div class="handle"></div></div>
+        </div>
+    </div>
+
+    <div class="half2">
+        <div class="backDoor2">
+            <div class="door2" onclick={image2move();}><div class="handle"></div></div>
+        </div>
+    </div>
+
+    <div class="image1">
+        <svg id="demo" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="900" height="900" viewBox="0 0 2000 1200">
+            <defs>
+            <radialGradient id="maskGradient">
+            <stop offset="50%" stop-color="#fff"/>
+            <stop offset="100%" stop-color="#000"/>
+            </radialGradient>
+            <mask id="theMask">
+            <circle id="masker" r="150" fill="url(#maskGradient)" cx="800" cy="450" />
+            </mask>
+            </defs> 
+            <image id="lines" href="./source/oz1_black.jpg" x="400" y="250" width="1600" height="1100" />
+            <g id="maskReveal" mask="url(#theMask)" > 
+                <image id="regular" href="./source/oz1_color.jpg" x="400" y="250" width="1600" height="1100" />
+            </g>
+            <circle id="ring" r="20" fill="none" stroke="#dc143c" stroke-width="2" cx="800" cy="450" />
+            <circle id="dot" r="4" fill="#dc143c" cx="800" cy="450" />
+        </svg>
+    </div>
+
+    <div class="image2">
+        <svg id="demo2" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="900" height="900" viewBox="0 0 2000 1200">
+            <defs>
+            <radialGradient id="maskGradient2">
+            <stop offset="50%" stop-color="#fff"/>
+            <stop offset="100%" stop-color="#000"/>
+            </radialGradient>
+            <mask id="theMask2">
+            <circle id="masker2" r="150" fill="url(#maskGradient2)" cx="800" cy="450" />
+            </mask>
+            </defs> 
+            <image id="lines2" href="./source/oz2_black.jpg" x="30" y="230" width="1600" height="1100" />
+            <g id="maskReveal2" mask="url(#theMask2)" > 
+                <image id="regular" href="./source/oz2_color.jpg" x="30" y="230" width="1600" height="1100" />
+            </g>
+            <circle id="ring2" r="20" fill="none" stroke="#dc143c" stroke-width="2" cx="800" cy="450" />
+            <circle id="dot2" r="4" fill="#dc143c" cx="800" cy="450" />
+        </svg>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script>
+    <script src="./js/door.js"></script>
+</body>
+
+</html>
