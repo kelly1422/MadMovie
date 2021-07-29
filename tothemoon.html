@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/tothemoon.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <svg id="svg" >
+  
+        <defs>
+         <mask id="theMask" maskUnits="userSpaceOnUse">
+       <path id="path" class="st0" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-miterlimit="10"stroke-width="3" />
+           </mask>
+     
+       </defs>
+        <g id="maskReveal" mask="url(#theMask)">
+       <path id="pathreveal" class="st0"fill="none" stroke="#ffffff" stroke-linecap="round" stroke-miterlimit="10"stroke-width="3" stroke-dasharray="6 24" />
+       
+        </g>
+     </svg>
+     
+
+    <div class="cursor"></div>
+<div class="cursor-follower"><img src="./source/white-star2.png" class="follower-image" height="50px"></div>
+<div id='canvas-holder'></div>
+<div id='clear-btn' class='btn'>CLEAR</div>
+<img src="source/ship2.png" id="ship">
+<button type="button" id="info"><img src="source/up-icon.png" id="infoimg"></button>
+
+<img src="source/lunarface1.png" id="lunar" height="40%">
+
+<div class="infobox">
+    <div id="posterwrapper"><img src="source/moonposter.jpg" id="poster"></div>
+    <span id="title"></span>
+    <div id="content">
+        A Trip to the Moon is a 1902 French adventure short film directed by Georges Méliès. Inspired by a wide variety of sources, including Jules Verne's 1865 novel From the Earth to the Moon and its 1870 sequel Around the Moon. Its ensemble cast of French theatrical performers is led by Méliès himself as main character Professor Barbenfouillis.</div>
+        <button type="button" id="info2"><img src="source/down-icon.png" id="infoimg2"></button>
+
+</div>
+
+
+<script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="https://assets.codepen.io/16327/MotionPathPlugin.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/TextPlugin.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js"></script>
+
+
+<script src="./js/tothemoon.js"></script>
+</body>
+</html>
+

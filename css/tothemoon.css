@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgba(33, 33, 33, 0.9);
+  color: #ffffff;
+  display: block;
+  font: 14px/1.3 Arial, sans-serif;
+  height: 50px;
+  position: relative;
+  z-index: 5;
+}
+
+h2 {
+  margin-top: 30px;
+  text-align: center;
+}
+#posterwrapper {
+  position: relative;
+  left: -10%;
+  top: 30%;
+}
+#poster {
+  position: absolute;
+  width: 20%;
+  z-index: 1500;
+}
+#title {
+  position: relative;
+  top: 10%;
+  margin: 0;
+  font-size: 40pt;
+  color: white;
+  font-family: "Bangers", cursive;
+}
+#content {
+  opacity: 0;
+  position: absolute;
+  top: 41%;
+  left: 35%;
+  margin: 0;
+  width: 35%;
+  font-size: 20pt;
+  color: white;
+  font-family: "Bangers", cursive;
+  overflow: hidden;
+}
+header h2 {
+  font-size: 22px;
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 80%;
+  text-align: center;
+}
+
+header a,
+a:visited {
+  text-decoration: none;
+  color: #fcfcfc;
+}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-moz-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-ms-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+canvas,
+.stars,
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+canvas {
+  z-index: 1001;
+}
+
+.stars {
+  background: #000
+    url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top
+    center;
+  z-index: 0;
+}
+
+.twinkling {
+  background: transparent
+    url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat
+    top center;
+  -moz-animation: move-twink-back 200s linear infinite;
+  -ms-animation: move-twink-back 200s linear infinite;
+  -o-animation: move-twink-back 200s linear infinite;
+  -webkit-animation: move-twink-back 200s linear infinite;
+  animation: move-twink-back 200s linear infinite;
+  z-index: 1;
+}
+
+#lunar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  width: 20%;
+  z-index: 1200;
+}
+
+body {
+  cursor: none;
+  background: #000;
+}
+
+.cursor {
+  position: absolute;
+  background-color: #fff;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  z-index: 1;
+  transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+    0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  transform: scale(1);
+}
+
+.cursor.active {
+  opacity: 0.5;
+  transform: scale(0);
+}
+
+.cursor.hovered {
+  opacity: 0.08;
+}
+
+.cursor-follower {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+    0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(5px, 5px);
+}
+
+.cursor-follower.active {
+  opacity: 0.7;
+  transform: scale(3);
+}
+
+.cursor-follower.hovered {
+  opacity: 0.08;
+}
+
+.follower-image {
+  transform: translate(-15px, -15px);
+}
+
+/*# sourceMappingURL=tothemoon.css.map */
+.btn {
+  padding: 15px;
+  border: 1px solid #333;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  z-index: 1000;
+}
+circle {
+  fill: white;
+}
+#info {
+  position: absolute;
+  right: 49%;
+  bottom: 8%;
+  z-index: 15000;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  width: 4%;
+}
+#info2 {
+  position: absolute;
+  right: 49%;
+  bottom: 10%;
+  z-index: 15001;
+  background-color: rgba(0, 0, 0);
+  border: none;
+  width: 4%;
+  height: 4%;
+}
+#infoimg {
+  z-index: 15000;
+  width: 100%;
+}
+#infoimg2 {
+  z-index: 15001;
+  width: 100%;
+}
+#svg {
+  position: absolute;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#ship {
+  position: absolute;
+  z-index: 2000;
+}
+#theMask {
+  z-index: 1001;
+}
+
+#maskReveal {
+  z-index: 1002;
+}
+#path {
+  z-index: 1003;
+}
+#pathreveal {
+  z-index: 1004;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: "Signika Negative", sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+.infobox {
+  z-index: 15001;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #141414c9;
+  text-align: center;
+}
+
+/*# sourceMappingURL=tothemoon.css.map */
